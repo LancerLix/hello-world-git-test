@@ -9,7 +9,7 @@ git·ÖÖ§Êµ¼ÊÉÏÀàËÆÓÚÖ¸ÏòÒ»¸öcommit¶ÔÏóµÄÖ¸Õë(·ÖÖ§Ö¸Õë)¡£HEADÒ²ÊÇÒ»¸öÖ¸Õë£¬Ö¸Ïòµ±Ç
 	ÐÂ½¨Ò»¸ö·ÖÖ§¡£
 	Êµ¼ÊÉÏÊÇÔÚµ±Ç°HEADÖ¸ÕëÖ¸ÏòµÄ·ÖÖ§Ö¸ÕëËùÖ¸ÏòµÄcommit¶ÔÏóÉÏÐÂÉú³ÉÒ»¸ö·ÖÖ§Ö¸Õë£¬Ö¸Ïòµ±Ç°commit¶ÔÏó¡£
 
-	-d  É¾³ý·ÖÖ§¡£Èç¹û¸Ã·ÖÖ§Ã»ÓÐÍêÈ«±»ÆäËû·ÖÖ§ºÏ²¢£¬É¾³ý»áÊ§°Ü
+	-d,--delete  É¾³ý·ÖÖ§¡£Èç¹û¸Ã·ÖÖ§Ã»ÓÐÍêÈ«±»ÆäËû·ÖÖ§ºÏ²¢£¬É¾³ý»áÊ§°Ü
 	--merged  ²é¿´ÒÑ¾­ºÏ²¢µÄ·ÖÖ§£¬²»´ø*±êÊ¶µÄ·ÖÖ§¿ÉÒÔÓÃ-dÉ¾³ý
 	--no-merged  ²é¿´Î´ºÏ²¢»òÍêÈ«ºÏ²¢µÄ·ÖÖ§
 
@@ -19,22 +19,32 @@ git·ÖÖ§Êµ¼ÊÉÏÀàËÆÓÚÖ¸ÏòÒ»¸öcommit¶ÔÏóµÄÖ¸Õë(·ÖÖ§Ö¸Õë)¡£HEADÒ²ÊÇÒ»¸öÖ¸Õë£¬Ö¸Ïòµ±Ç
 	ÇÐ»»¹¤×÷·ÖÖ§¡£
 	Êµ¼ÊÉÏÊÇ¸Ä±äHEADÖ¸ÕëËùÖ¸ÏòµÄ·ÖÖ§Ö¸Õë¡£
 
-	-- file_name  °Ñ¸ÃÎÄ¼þ´ÓÔÝ´æÇøÒÆ³ý£¬²¢³·Ïú¶Ô¸ÃÎÄ¼þµÄÐÞ¸Ä(git resetÖ»»áÒÆ³öÔÝ´æÇø£¬²»»á³·ÏúÎÄ¼þµÄÐÞ¸Ä)
+	-- file_name  °Ñ¸ÃÎÄ¼þ´ÓÔÝ´æÇøÒÆ³ý£¬²¢³·Ïú¶Ô¸ÃÎÄ¼þµÄÐÞ¸Ä(git resetÖ»»áÒÆ³öÔÝ´æÇø£¬²»»á³·Ïú¶Ôµ±Ç°¹¤×÷¿Õ¼ä±¾µØÎÄ¼þµÄÐÞ¸Ä)
 
 
 
 3.git add
-	°ÑÐèÒªcommitµÄÎÄ¼þ¼ÓÈëÔÝ´æÇø¡£
+	°ÑÐèÒªcommitµÄÎÄ¼þµÄ±ä»¯Í¬²½µ½ÔÝ´æÇø¡£
 	Êµ¼ÊÉÏÊÇÖØÐÂ¼ÆËãÐèÒªÌá½»ÎÄ¼þºÍÄ¿Â¼µÄÐ£ÑéºÍ£¬Éú³É¶ÔÓ¦µÄblob¶ÔÏó£¬²¢¼ÓÈëÔÝ´æÇø¡£
 
-
-
-4.git reset
-	°Ñ¼ÓÈëµ½ÔÝ´æÇøµÄÎÄ¼þ´ÓÔÝ´æÇøÒÆ³ý¡£
+	-f,--force  Ç¿ÖÆÌá½»±»ignoreÎÄ¼þºöÂÔµÄÎÄ¼þ
+	-u,--update  Ö»°ÑÒÑ¾­¸ú×ÙµÄÎÄ¼þµÄÐÞ¸ÄÍ¬²½µ½ÔÝ´æÇø£¬°üÀ¨É¾³ýºÍÐÞ¸Ä£¬²»°üÀ¨ÐÂÔö¡£
 
 
 
-5.git commit
+4.git rm
+	Í¬Ê±É¾³ýµ±Ç°¹¤×÷¿Õ¼ä±¾µØÎÄ¼þºÍÔÝ´æÇøÎÄ¼þ¡£
+	Ïàµ±ÓÚÖ±½ÓÔÚµ±Ç°¹¤×÷¿Õ¼äÉ¾³ý±¾µØÎÄ¼þºó£¬ÔÙÖ´ÐÐgit add°ÑÐÞ¸ÄÍ¬²½µ½ÔÝ´æÇø¡£
+
+
+
+5.git reset
+	°Ñ¼ÓÈëµ½ÔÝ´æÇøµÄÎÄ¼þ´ÓÔÝ´æÇøÒÆ³ý(²»´øÓÐÐèÒªÖØÖÃµ½ÄÄ¸ö·ÖÖ§²ÎÊýÊ±)¡£
+	Êµ¼ÊÉÏÊÇÍ¬Ê±ÖØÖÃ»òÕßÍ¬Ê±ÐÞ¸ÄHEADÖ¸ÕëÒÔ¼°HEADÖ¸ÕëËùÖ¸ÏòµÄ·ÖÖ§Ö¸ÕëËùÖ¸ÏòµÄcommit¶ÔÏó£¬²¢¿ÉÒÔÖØÖÃÔÝ´æÇø(´øÓÐÐèÒªÖØÖÃµ½ÄÄ¸ö·ÖÖ§²ÎÊýÊ±)¡£
+
+
+
+6.git commit
 	Ìá½»ÔÝ´æÇø¡£
 	Êµ¼ÊÉÏÊÇÕë¶ÔÔÝ´æÇøÖØÐÂÉú³ÉÒ»¸öblob¶ÔÏóÊ÷(µ±Ç°¹¤×÷¿Õ¼äµÄ¿ìÕÕ)£¬²¢Éú³ÉÒ»¸öcommit¶ÔÏóÖ¸Ïò¸Ãblob¶ÔÏóÊ÷£¬²¢ÒÆ¶¯µ±Ç°·ÖÖ§Ö¸ÕëÖ¸Ïò¸Ãcommit¶ÔÏó¡£
 
@@ -42,7 +52,7 @@ git·ÖÖ§Êµ¼ÊÉÏÀàËÆÓÚÖ¸ÏòÒ»¸öcommit¶ÔÏóµÄÖ¸Õë(·ÖÖ§Ö¸Õë)¡£HEADÒ²ÊÇÒ»¸öÖ¸Õë£¬Ö¸Ïòµ±Ç
 
 
 
-6.git merge
+7.git merge
 	ºÏ²¢·ÖÖ§¡£
 	Êµ¼ÊÉÏÊÇ»ùÓÚµ±Ç°ÐèÒªºÏ²¢µÄblobÊ÷£¬¶Ô±ÈÓÐ¸Ä¶¯µÄÎÄ¼þ£¬½øÐÐgit add¼ÓÈëÔÝ´æÇø£¬ÔÙ½øÐÐgit commitÉú³ÉÒ»¸öÐÂµÄcommit¶ÔÏó(git merge¿ÉÒÔÀàËÆ¿´³É¶Ô±Èºógit add + git commit)¡£
 
@@ -52,7 +62,7 @@ git·ÖÖ§Êµ¼ÊÉÏÀàËÆÓÚÖ¸ÏòÒ»¸öcommit¶ÔÏóµÄÖ¸Õë(·ÖÖ§Ö¸Õë)¡£HEADÒ²ÊÇÒ»¸öÖ¸Õë£¬Ö¸Ïòµ±Ç
 
 
 
-7.git stash
+8.git stash
 	´¢²ØÓëÇåÀí¹¤×÷Ä¿Â¼µÄÔàµÄ×´Ì¬(ÓÐÐÞ¸ÄµÄ¸ú×ÙÎÄ¼þÓëÔÝ´æ¸Ä¶¯)£¬Ä¬ÈÏÖ»»á´¢²ØÐÞ¸ÄµÄ¸ú×ÙÎÄ¼þºÍÔÝ´æÎÄ¼þ£¬²»»á´¢²ØÎ´¸ú×ÙÎÄ¼þ(¿ÉÒÔÍ¨¹ýÑ¡Ïî¸Ä±ä¸ÃÐÐÎª)¡£
 	Í¨¹ýÕ»ÊµÏÖ¡£Èç¹û¹¤×÷Ä¿Â¼Ã»ÓÐ´¦ÓÚclean×´Ì¬(ÓÐ¸ú×ÙÎÄ¼þÐÞ¸Ä»òÕßgit add¶ÔÓ¦µÄÔÝ´æÇø²»Îª¿Õ)£¬Õâ¸öÊ±ºòÇÐ»»Ä¿Â¼£¬²»µ«ÔÚµ±Ç°Ä¿Â¼µÄÐÞ¸Ä»á¶ªÊ§£¬¶øÇÒ¿ÉÄÜ»áÒýÆð³åÍ»(ÐÞ¸ÄÁËÒÑ¸ú×ÙµÄÎÄ¼þ)£¬¶ø´ËÊ±
 ÓÖ²»ÏëÈ¥Ê¹ÓÃgit commitÀ´Ìá½»(¹¤×÷Ö»½øÐÐÁËÒ»°ë)£¬¾Í¿ÉÒÔÓÃÕâ¸öÃüÁî±£´æ¹¤×÷×´Ì¬µ½Õ»ÖÐ£¬ÒÔºó½øÐÐ»Ö¸´¡£
@@ -64,29 +74,29 @@ git·ÖÖ§Êµ¼ÊÉÏÀàËÆÓÚÖ¸ÏòÒ»¸öcommit¶ÔÏóµÄÖ¸Õë(·ÖÖ§Ö¸Õë)¡£HEADÒ²ÊÇÒ»¸öÖ¸Õë£¬Ö¸Ïòµ±Ç
 
 
 
-8.git stash list
+9.git stash list
 	ÏÔÊ¾µ±Ç°´¢²ØÕ»µÄÇé¿ö£¬¸Ã´¢²ØÕ»ÊÇÈ«¾ÖµÄ£¬ÒâÎ¶×ÅÈÎºÎ·ÖÖ§Ö¸ÕëÖ¸ÏòµÄcommit¶ÔÏó¶¼¿ÉÒÔÓ¦ÓÃ¸Ã´¢²ØÕ»£¬Õâ¸öÇé¿öÏÂÐèÒªÅÅ³ý³åÍ»¡£
 
 
 
-9.git stash apply
+10.git stash apply
 	»Ö¸´Ö®Ç°´¢²ØÔÚÕ»ÖÐµÄ¹¤×÷Ä¿Â¼µÄÔàµÄ×´Ì¬£¬Ä¬ÈÏ²»»á»Ö¸´Ö®Ç°´¢²ØµÄgit addÃüÁîÒÑÔÝ´æµÄÎÄ¼þ(¿ÉÒÔÍ¨¹ýÑ¡Ïî¸Ä±ä¸ÃÐÐÎª)¡£
 
 	--index  Í¬Ê±»Ö¸´Ö®Ç°´¢²ØµÄgit addÃüÁîÒÑÔÝ´æµÄÎÄ¼þ
 
 
 
-10.git stash branch
-	Ïàµ±ÓÚgit branch + git checkout + git stash¡£
+11.git stash branch
+	Ïàµ±ÓÚ"git branch + git checkout + git stash"¡£
 
 
 
-11.git rebase
-	Ð§¹ûÓëgit mergeÏàÍ¬£¬Ö»ÊÇ×éÖ¯ºÏ²¢µÄÐÎÊ½²»Í¬£¬×îºó¶¼»áÖØÐÂÉú³Écommit¶ÔÏó(git rebase¸ù¾Ýrebase·ÖÖ§µÄÇé¿ö¿ÉÄÜ»áÉú³É¶à¸öcommit¶ÔÏóµÄÇé¿ö)¡£
+12.git rebase
+	Ð§¹ûÓëgit mergeÏàÍ¬£¬Ö»ÊÇ×éÖ¯ºÏ²¢µÄÐÎÊ½²»Í¬£¬×îºó¶¼»áÖØÐÂÉú³Écommit¶ÔÏó£¬Ö»ÊÇrebase²»»á½øÐÐºÏ²¢£¬ÐèÒªÔÙÊÖ¶¯µ÷ÓÃgit merge(git rebase¸ù¾Ýrebase·ÖÖ§µÄÇé¿ö¿ÉÄÜ»áÉú³É¶à¸öcommit¶ÔÏóµÄÇé¿ö)¡£
 	git rebase»á°Ñµ±Ç°·ÖÖ§ÉÏËùÓÐµÄcommit¶ÔÏóÓëËûÐèÒªrebaseµÄ·ÖÖ§µÄ¹²Í¬µÄcommit¶ÔÏó(·Ö²æ´¦)×ö±È½Ï£¬ÌáÈ¡ÏàÓ¦µÄÐÞ¸Ä²¢´æÎªÁÙÊ±ÎÄ¼þ£¬²¢ÇÒÒÆ³ý¶ÔÓ¦µÄcommit¶ÔÏóÈ»ºó½«·ÖÖ§Ö¸ÕëÖ¸ÏòrebaseµÄ·ÖÖ§£¬
 ÒÀ´Î×ögit commit¡£
 
-	git rebase×öºÃÊÇÖ»µ±×÷ÔÚÍÆËÍÇ°ÇåÀíÌá½»Ê¹Ö®Õû½àµÄ¹¤¾ß£¬²¢ÇÒ×îºÃÖ»ÔÚ´ÓÎ´ÍÆËÍÖÁ¹²ÓÃ²Ö¿âµÄÌá½»ÉÏÖ´ÐÐ±ä»ùÃüÁî£¬Èç¹ûÔÚÒÑÌá½»µÄÖÁ¹«¹²²Ö¿âµÄ·ÖÖ§ÉÏ×örebase²¢ÇÒforce pushµÄ»°£¬¿ÉÄÜ»áÒýÆð¹«¹²
+	git rebase×îºÃÊÇÖ»µ±×÷ÔÚÍÆËÍÇ°ÇåÀíÌá½»Ê¹Ö®Õû½àµÄ¹¤¾ß£¬²¢ÇÒ×îºÃÖ»ÔÚ´ÓÎ´ÍÆËÍÖÁ¹²ÓÃ²Ö¿âµÄÌá½»ÉÏÖ´ÐÐ±ä»ùÃüÁî£¬Èç¹ûÔÚÒÑÌá½»µÄÖÁ¹«¹²²Ö¿âµÄ·ÖÖ§ÉÏ×örebase²¢ÇÒforce pushµÄ»°£¬¿ÉÄÜ»áÒýÆð¹«¹²
 ²Ö¿â»ìÂÒ(rebaseÉ¾³ýµÄcommit¶ÔÏó¿ÉÄÜ»¹²ÐÁôÔÚ±ðÈËµÄ±¾µØ²Ö¿â£¬È»ºó±ðÈËÔÙ´Îpush£¬¹«¹²²Ö¿âÄ¿Â¼»á¸ü¼Ó¸´ÔÓ)¡£
 
 
@@ -94,21 +104,33 @@ git·ÖÖ§Êµ¼ÊÉÏÀàËÆÓÚÖ¸ÏòÒ»¸öcommit¶ÔÏóµÄÖ¸Õë(·ÖÖ§Ö¸Õë)¡£HEADÒ²ÊÇÒ»¸öÖ¸Õë£¬Ö¸Ïòµ±Ç
 
 
 
-12.git clean
-	ÇåÀí¹¤×÷Ä¿Â¼µÄÔàµÄ×´Ì¬(ÓÐÐÞ¸ÄµÄ¸ú×ÙÎÄ¼þÓëÔÝ´æ¸Ä¶¯)²¢¶ªÆú£¬»áÒÆ³ýÃ»ÓÐºöÂÔ(ÈÎºÎÓë .gitiignore »òÆäËûºöÂÔÎÄ¼þÖÐµÄÄ£Ê½Æ¥ÅäµÄÎÄ¼þ)µÄÎ´¸ú×ÙÎÄ¼þ£¬Òò´ËÒªÐ¡ÐÄÊ¹ÓÃ¸ÃÃüÁî£¬·ÇÌØÊâÄ¿µÄ
+13.git clean
+	ÇåÀí¹¤×÷Ä¿Â¼µÄÔàµÄ×´Ì¬(ÓÐÐÞ¸ÄµÄ¸ú×ÙÎÄ¼þÓëÔÝ´æ¸Ä¶¯)²¢¶ªÆú£¬»áÒÆ³ýÃ»ÓÐºöÂÔ(ÈÎºÎÓë .gitignore »òÆäËûºöÂÔÎÄ¼þÖÐµÄÄ£Ê½Æ¥ÅäµÄÎÄ¼þ)µÄÎ´¸ú×ÙÎÄ¼þ£¬Òò´ËÒªÐ¡ÐÄÊ¹ÓÃ¸ÃÃüÁî£¬·ÇÌØÊâÄ¿µÄ
 ×îºÃÊ¹ÓÃstash¡£
 
-	-f  Ç¿ÖÆÒÆ³ý
-	-d  Í¬Ê±ÒÆ³ý¿ÕµÄ×ÓÄ¿Â¼
-	-n  cleanÇ°ÏÔÊ¾ÓÐÄÄÐ©ÎÄ¼þ»á±»ÒÆ³ý
-	-x  ÒÆ³ýÎ´¸ú×ÙÎÄ¼þ£¬ÎÞÂÛÊÇ·ñºöÂÔ
-	-i  ½»»¥Ê½clean
+	-f,--force  Ç¿ÖÆÒÆ³ý
+	-d  Í¬Ê±ÒÆ³ýÎª¸ú×ÙµÄ×ÓÄ¿Â¼
+	-n,--dry-run  cleanÇ°ÏÔÊ¾ÓÐÄÄÐ©ÎÄ¼þ»á±»ÒÆ³ý,²¢²»Êµ¼ÊÒÆ³ý
+	-x  ²»½öÒÆ³ýÎ´¸ú×ÙµÄÎÄ¼þ£¬¶øÇÒ»áÒÆ³ýÓë .gitignore»òÆäËûºöÂÔÎÄ¼þÖÐµÄÄ£Ê½Æ¥ÅäµÄÎÄ¼þ£¬Óë-eÅäºÏ£¬»¹»áÒÆ³ý-eÖ¸¶¨µÄ¹æÔòÎÄ¼þ (Õý³£Ê¹ÓÃÃüÁî²»»áÒÆ³ý±»ºöÂÔÎÄ¼þºöÂÔµÄÎÄ¼þºÍÄ¿Â¼)
+	-i,--interactive  ½»»¥Ê½clean
 	
 
 
-13.git status
+14.git status
 	²é¿´µ±Ç°¹¤×÷·ÖÖ§µÄ×´Ì¬¡£
+	-s,--short  ÒÔ¼ò¶Ì¸ñÊ½ÏÔÊ¾µ±Ç°·ÖÖ§×´Ì¬
+	-b,--branch  Ö¸¶¨²é¿´µÄbranch
 
+
+
+15.git log
+	²é¿´µ±Ç°¹¤×÷·ÖÖ§µÄcommitÀúÊ·ÐÅÏ¢¼°½á¹¹×´Ì¬¡£
+
+	--pretty[=<format>]  ¶¨ÒåÏÔÊ¾µÄ¸ñÊ½
+	--abbrev-commit  Ëõ¼õcommit idµÄÏÔÊ¾
+	--oneline  Ïàµ±ÓÚ"--pretty=oneline --abbrev-commit"
+	--decorate[=short|full|no]  ´òÓ¡µ±Ç°Ïà¹Øref(ÀàËÆÓÚÖ¸Õë)µÄÎ»ÖÃ
+	--graph  ÒÔÍ¼ÐÎµÄ·½Ê½ÏÔÊ¾commitÀúÊ·
 
 
 
@@ -137,5 +159,5 @@ gitÔ¶³ÌÒýÓÃÊÇ¶ÔÔ¶³Ì²Ö¿âµÄÒýÓÃ£¨Ö¸Õë£©£¬°üÀ¨·ÖÖ§¡¢±êÇ©µÈµÈ¡£
 
 
 
-Reading From: https://git-scm.com/book/en/v2
+Reading From: "https://git-scm.com/book/en/v2" and "git command line help manual"
 
